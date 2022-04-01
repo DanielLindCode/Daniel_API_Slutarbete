@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="topPage">Daniels API</h1>
+        <p> This API as four functions.</p>
+        <ul>
+            <li><a href="#calculatorGroup" class="button">Calculator</a></li>
+            <li><a href="#rpsGroup" class="button">Rock, Paper, Scissor Game</a></li>
+            <li><a href="#imgGroup" class="button">Random image display</a></li>
+            <li><a href="#fileReaderGroup" class="button">Csv file reader</a></li>
+        </ul>
+        <p>Read more about the AIP groups bellow.</p>
+    </header>
+
+    <div class="groupContainer">
+        <h2 id="calculatorGroup">Calculator group</h2>
+        <p>
+            The calculator takes in three parameters. An operator, number1 and number2. This calculator has operators PLUS, MINUS, TIMES, DIVIDE.
+        </p>
+        <div class="exampleContainer">
+            <p>The root "/calc" displays information about the group.</p>
+            <p>[GET] /calc</p>
+            <a href="http://localhost:8080/calc" target="_blank">Example</a>
+        </div>
+        <div class="exampleContainer">
+            <p>Plus operator example</p>
+            <p>[GET] /calc/PLUS/5/10</p>
+            <a href="http://localhost:8080/calc/PLUS/5/10" target="_blank">Result</a>
+        </div>
+        <div class="exampleContainer">
+            <p>Minus operator example</p>
+            <p>[GET] /calc/MINUS/100/25</p>
+            <a href="http://localhost:8080/calc/MINUS/100/25" target="_blank">Result</a>
+        </div>
+        <div class="exampleContainer">
+            <p>Divide operator example</p>
+            <p>[GET] /calc/DIVIDE/40/6</p>
+            <a href="http://localhost:8080/calc/DIVIDE/40/6" target="_blank">Result</a>
+        </div>
+        <div class="exampleContainer">
+            <p>Times operator example</p>
+            <p>[GET] /calc/TIMES/6/8</p>
+            <a href="http://localhost:8080/calc/TIMES/6/8" target="_blank">Result</a>
+        </div>
+        <a href="#topPage">Go up</a>
+    </div>
+
+    <div class="groupContainer">
+        <h2 id="rpsGroup">Rock, Paper, Scissor -Game group</h2>
+        <p>
+            The rock, paper, scissors game takes in one parameter (playerMove). The moves you can make is "rock", "paper" and "scissors".
+        </p>
+        <div class="exampleContainer">
+            <p>The root "/rsp" displays information about the group.</p>
+            <p>[GET] /rps</p>
+            <a href="http://localhost:8080/rps" target="_blank">Example</a>
+        </div>
+        <div class="exampleContainer">
+            <p>Play against the computer!</p>
+            <p>[GET] /rps/[playerMove]</p>
+            <br>
+            <a href="http://localhost:8080/rps/play/rock" target="_blank">Play Rock!</a>
+            <br>
+            <a href="http://localhost:8080/rps/play/paper" target="_blank">Play Paper!</a>
+            <br>
+            <a href="http://localhost:8080/rps/play/scissors" target="_blank">Play Scissors!</a>
+        </div>
+        <div class="exampleContainer">
+            <p>See your scores!</p>
+            <p>[GET] /rps/result</p>
+            <a href="http://localhost:8080/rps/result" target="_blank">Show me!</a>
+        </div>
+        <a href="#topPage">Go up</a>
+    </div>
+
+    <div class="groupContainer">
+        <h2 id="imgGroup">Image Display Group</h2>
+        <p>
+            The image display application has no parameters.
+        </p>
+        <div class="exampleContainer">
+            <p>Takes in no parameters. Shows information about this service.</p>
+            <p>[GET] /image</p>
+            <a href="http://localhost:8080/image" target="_blank">Example</a>
+        </div>
+        <div class="exampleContainer">
+            <p>Takes in one parameter (show). Displays a random picture.</p>
+            <p>[GET] /image/show</p>
+            <a href="http://localhost:8080/image/show" target="_blank">Example</a>
+        </div>
+        <a href="#topPage">Go up</a>
+    </div>
+
+    <div class="groupContainer">
+        <h2 id="fileReaderGroup">File reader Group</h2>
+        <p>
+            The file reader takes in no parameters. Can display a sample.csv file as raw data text and as JSON.
+        </p>
+        <div class="exampleContainer">
+            <p>Displays information about the service.</p>
+            <p>[GET] /filereader</p>
+            <a href="http://localhost:8080/filereader" target="_blank">Example</a>
+        </div>
+        <div class="exampleContainer">
+            <p>Reads a file and returns it as plain data text.</p>
+            <p>[GET] /filereader/totext</p>
+            <a href="http://localhost:8080/filereader/totext" target="_blank">Example</a>
+        </div>
+        <div class="exampleContainer">
+            <p>Reads a csv file and returns it as JSON.</p>
+            <p>[GET] /filereader/tojson</p>
+            <a href="http://localhost:8080/filereader/tojson" target="_blank">Example</a>
+        </div>
+        <a href="#topPage">Go up</a>
+    </div>
+
+</body>
+
+</html>
